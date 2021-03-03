@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RailsAmusementPark</title>
+</head>
+
+<body>
+
+<%= form_tag '/signin' do %> 
+    Your Name: <%= collection_select :user, :name, User.all, :name, :name %> <br>
+    
+    Your Password: <%= password_field_tag :password %> 
+
+    <%= submit_tag "Sign In" %> 
+<% end %> 
+
+</body>
+
+</html>
